@@ -1,0 +1,127 @@
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <style>
+    * {
+      cursor: none;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    /* Loading Screen */
+    .loading {
+      background-color: #FFF;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s ease;
+    }
+
+    .loading img {
+      display: block;
+      min-height: 209px;
+      min-width: 200px;
+    }
+    .loading-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .loading-text {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+      letter-spacing: 2px;
+      font-weight: bold;
+    }
+
+    .loading-text::after {
+      content: '';
+      animation: dots 1.5s infinite steps(3);
+    }
+
+    @keyframes dots {
+      0%   { content: '.'; }
+      33%  { content: '..'; }
+      66%  { content: '...'; }
+      100% { content: ''; }
+    }
+
+    /* Custom Cursor */
+    .mouse {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: #fff782;
+      position: fixed; /* ← diubah dari absolute ke fixed */
+      pointer-events: none; /* ← supaya tidak mengganggu klik */
+      z-index: 99999; /* ← di atas loading screen */
+      transform: translate(-50%, -50%);
+      animation: mouseAnimation 0.9s infinite ease-in-out alternate;
+      left: 0;
+      top: 0;
+    }
+
+    @keyframes mouseAnimation {
+      from { width: 25px; height: 25px; }
+      to   { width: 15px; height: 15px; }
+    }
+  </style>
+  <title>Loading</title>
+</head>
+<body>
+
+  <div class="loading">
+    <div class="loading-inner"></div>
+    <img src="img/loading.gif" alt="Loading">
+    <p class="loading-text">loading.</p>
+  </div>
+
+  <div class="mouse original"></div>
+
+  <script>
+    // Loading: tampil 4.5 detik → fade 0.5 detik → redirect
+    $(window).on("load", function () {
+      setTimeout(function () {
+        $(".loading").css("opacity", "0");
+        setTimeout(function () {
+          window.location.href = "ke1.html";
+        }, 300);
+      }, 2500);
+    });
+
+    // Gerakkan kursor
+    $(window).on("mousemove", function (e) {
+      $(".original").css({
+        left: e.clientX, /* ← pakai clientX bukan pageX (cocok untuk fixed) */
+        top:  e.clientY
+      });
+    });
+
+    // Efek klik — clone lalu hapus
+    $(document).on("click", function (e) {
+      var clone = $(".original")
+        .clone(true)
+        .appendTo("body")
+        .css({ left: e.clientX, top: e.clientY })
+        .removeClass("original");
+
+      setTimeout(function () { clone.remove(); }, 300);
+    });
+  </script>
+
+</body>
+</html>
