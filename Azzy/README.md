@@ -1,2 +1,0 @@
-# Azzy
-For Code
