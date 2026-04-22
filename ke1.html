@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Styles.css">
+    <title>Test Web</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: black; display: flex; flex-direction: column; height: 100vh; overflow: hidden;">
+
+  <header style="background-color: black; padding: 6px 16px; flex-shrink: 0;">
+    <div class="t">
+        <div class="left-group">
+            <div class="img1">
+                <a href="ke1.html"><img src="img/Dance.gif" alt="My" style="max-width: 100%; height: auto;"></a>
+            </div>
+            <span id="jam" style="font-size: clamp(16px, 4vw, 30px);">00:00:00</span>
+        </div>
+    </div>
+  </header>
+
+  <nav>
+      <ul class="menu">
+          <li><a href="ke1.html">K1</a></li>
+          <li><a href="ke2.html" target="_blank">K2</a></li>
+          <li><a href="ke3.html" target="_blank">K3</a></li>
+          <li><a href="index.html">Refresh Page</a></li>
+      </ul>
+  </nav>
+
+  <main style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
+
+    <div class="conten"
+        style="flex: 1; background-color: lightgray; display: flex; flex-direction: column;
+        justify-content: center; align-items: center; gap: clamp(6px, 2vh, 14px);
+        padding: clamp(12px, 3vw, 24px); text-align: center; letter-spacing: 2px;">
+
+        <h1 style="margin: 0; font-size: clamp(16px, 3.5vw, 26px);">Selamat Datang di Website Azzy</h1>
+
+        <p style="margin: 0; width: min(700px, 90%); text-align: justify; font-size: clamp(12px, 2vw, 15px); letter-spacing: normal; line-height: 1.6;">
+            Ini adalah halaman utama dari website Azzy. Web ini dibuat sebagai latihan dari proses pembuatan website mulai dari dasar hingga profesional. Azzy berkomitmen untuk memberikan informasi yang akurat dan layanan terbaik kepada pengunjung website.
+        </p>
+
+        <p style="margin: 0; width: min(700px, 90%); text-align: justify; font-size: clamp(12px, 2vw, 15px); letter-spacing: normal; line-height: 1.6;">
+            Terima kasih telah mengunjungi website ini, silahkan login/tekan menu lainnya untuk melanjutkan/untuk mengetahui lebih banyak konten yang ada.
+        </p>
+    </div>
+
+    <div class="conten2"
+        style="background-color: lightgreen; display: flex; flex-direction: column;
+        justify-content: center; align-items: center;
+        gap: clamp(6px, 2vh, 12px); padding: clamp(10px, 2vh, 20px) 24px;">
+
+        <p style="margin: 0; font-weight: bold; font-size: clamp(13px, 2vw, 16px);">Login</p>
+
+        <p style="margin: 0; font-size: clamp(12px, 2vw, 15px);">
+            Username: <input type="text" name="user" placeholder="Username" required
+                style="width: clamp(140px, 35vw, 220px); padding: 4px 8px; font-size: clamp(12px, 2vw, 14px);
+                border-radius: 4px; border: 1px solid #aaa;">
+        </p>
+
+        <p style="margin: 0; font-size: clamp(12px, 2vw, 15px);">
+            Password: <input type="password" name="pass" placeholder="Password" required
+                style="width: clamp(140px, 35vw, 220px); padding: 4px 8px; font-size: clamp(12px, 2vw, 14px);
+                border-radius: 4px; border: 1px solid #aaa;">
+        </p>
+
+        <button type="submit"
+            style="padding: clamp(5px, 1vh, 8px) clamp(16px, 4vw, 24px);
+            font-size: clamp(12px, 2vw, 14px); cursor: pointer;
+            border: none; border-radius: 4px; background-color: #2a7a2a; color: white; margin-top: 2px;">
+            Submit
+        </button>
+    </div>
+
+  </main>
+
+  <script>
+      function updateClock() {
+          const now = new Date();
+          const hours = now.getHours().toString().padStart(2, '0');
+          const minutes = now.getMinutes().toString().padStart(2, '0');
+          const seconds = now.getSeconds().toString().padStart(2, '0');
+          document.getElementById("jam").textContent = `${hours}:${minutes}:${seconds}`;
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+
+      if (performance.navigation.type === 1) {
+          window.location.href = "index.html";
+      }
+  </script>
+
+</body>
+</html>
