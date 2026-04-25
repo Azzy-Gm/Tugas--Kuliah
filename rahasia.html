@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Secret Page</title>
+    <style>
+        html, body {scroll-behavior: smooth; scroll-padding-top: 20px;}
+    </style>
 </head>
 <body style="margin: 0; padding: 0; background-color: #2e2d2d; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
 
     <!-- Landing -->
-    <div id="landing" style="color: ; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center;">
+    <div id="landing" style="color: ; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center;">
         <div style="background-color: #444; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
             <h1>Welcome to the Secret Page</h1>
             <p>Sangat mudah mengakses ini, benar? Teruslah menjelajahi web ini untuk menemukan page rahasia lainnya.</p>
@@ -19,10 +22,11 @@
     </div>
 
     <!-- Isi Content -->
-    <article id="awal" style="max-width: 800px; margin: 40px auto; padding: 30px 40px; background-color: #3a3a3a; border: 1px solid #666; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+    <article id="awal" style="max-width: 90vh; margin: 40px auto; padding: 30px 40px; background-color: #3a3a3a; border: 1px solid #666; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
         <header style="border-bottom: 1px solid #666; padding-bottom: 16px; margin-bottom: 24px;">
             <p style="margin: 0 0 6px 0; font-size: 0.9em; color: #aaa; letter-spacing: 2px; text-transform: uppercase;">Secret Content</p>
             <h2 style="margin: 0;">The Last Day of Milk Time</h2>
+            <a href="#last"><span>Ke akhir</span></a>
         </header>
 
         <div style="letter-spacing: 0.5px; line-height: 1.8; text-align: justify;">
@@ -33,7 +37,7 @@
             <p style="margin-bottom: 16px;">It's not just your bodies that are growing and changing. I know what you've been up to. I hear the stories. You, Mr. Watanabe, you grew up in a family that owns an electronics shop, and I know you've figured out how to remove most of the pixilation on adult videos. You've been passing them along to the other boys. You're growing up. Your minds are changing as quickly as your bodies. I know that wasn't the best example, but what I mean is, you're entering what we sometimes call the "rebellious period." It's a time when boys and girls tend to be touchy, to be hurt or offended by the least little thing, and when they're easily influenced by their environment. You'll begin to imitate everyone and everything around you as you try to figure out who you are. If you're honest, I suspect many of you will recognize these changes in yourselves already. You've just seen a good example: Up until a few moments ago most of you thought of your free milk as a benefit. But now that I've told you it was an experiment, your feelings about the milk have suddenly changed. Am I right?</p>
 
             <p style="margin-bottom: 16px;">Still, there's nothing too odd about that—it's human nature to change your mind, and not just in puberty. In fact, the teachers have been saying that your class is actually a good bit calmer and better behaved than the usual group. Maybe we have the milk to thank for that.</p>
-
+<span id="last"></span>
             <p style="margin-bottom: 16px;">But I have something more important I wanted to tell you today. I wanted you to know that I'll be retiring at the end of the month. No, I'm not moving to a new school, I'm retiring as a teacher. Which means that you're the last students I'll ever teach, and I'll remember you for as long as I live.</p>
 
             <p style="margin-bottom: 16px;">Settle down now. I appreciate your response—especially those of you who actually sound as though you're sorry to hear I'm leaving—what? Am I resigning because of what happened? Yes, I suppose so, and I'd like to take some time today to talk to you about that.</p>
@@ -45,9 +49,42 @@
             <a href="#landing" style="color: blue; text-decoration: ; font-size: 0.9em;">Kembali ke atas</a>
             
             <div style="margin-top: 12px; font-size: 0.9em; color: white;">
-                <a href="index.html"><button style="background-color: green; font-size: 0.9em; color: white; cursor: pointer; padding: 10px 20px;">Logout</button></a>
+                <a href="#kedua"><button style="background-color: green; font-size: 0.9em; color: white; cursor: pointer; padding: 10px 20px;">Next</button></a>
             </div>
         </div>
     </article>
+
+    <article id="kedua" style="max-width: 90vh; margin: 10vh auto; padding: 30px 40px; background-color: #3a3a3a; border: 1px solid #666; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+        <header style="border-bottom: 1px solid #666; padding-bottom: 16px; margin-bottom: 24px;">
+            <p style="margin: 0 0 6px 0; font-size: 0.9em; color: #aaa; letter-spacing: 2px; text-transform: uppercase;">Secret Content</p>
+            <h2 style="margin: 0;">The Last Day of Milk Time</h2>
+            <a href="#last2"><span>Ke akhir</span></a>
+        </header>
+
+        <div style="letter-spacing: 0.5px; line-height: 1.8; text-align: justify;">
+            <p style="margin-bottom: 16px;">Once you finish your milk, please put the carton back in the box. Make sure you return it to the space with your number on it and then get back to your desk. It looks like everyone is just about done. Since today is the last day of the school year, we will also be marking the end of "Milk Time." Thanks to all of you for participating. I also heard some of you wondering whether the program would be continuing next year, but I can tell you now that it won't. This year, we were designated as a model middle school for the Health Ministry's campaign to promote dairy products. We were asked to have each of you drink a carton of milk every day, and now we're looking forward to the annual school physicals in April to see whether your height and bone mass come in above the national averages.</p>
+
+            <p style="margin-bottom: 16px;">Yes, I suppose you could say that we've been using you as guinea pigs, and I'm sure this year wasn't very pleasant for those of you who are lactose intolerant or who simply don't like milk. But the school was randomly selected for the program, and each classroom was supplied with the daily milk cartons and the box to hold them, with cubbyholes for your carton to identify each of you by seat number; and it's true that we've kept track of who drank the milk and who didn't. But why should you be making faces now when you were drinking the milk happily enough a few minutes ago? What's wrong with being asked to drink a little milk every day? You're about to enter puberty. Your bodies will be growing and changing, and you know drinking milk helps build strong bones. But how many of you actually drink it at home? And the calcium is good for more than just your bones; you need it for the proper development of your nervous system. Low levels of calcium can make you nervous and jumpy.</p>
+
+            <p style="margin-bottom: 16px;">It's not just your bodies that are growing and changing. I know what you've been up to. I hear the stories. You, Mr. Watanabe, you grew up in a family that owns an electronics shop, and I know you've figured out how to remove most of the pixilation on adult videos. You've been passing them along to the other boys. You're growing up. Your minds are changing as quickly as your bodies. I know that wasn't the best example, but what I mean is, you're entering what we sometimes call the "rebellious period." It's a time when boys and girls tend to be touchy, to be hurt or offended by the least little thing, and when they're easily influenced by their environment. You'll begin to imitate everyone and everything around you as you try to figure out who you are. If you're honest, I suspect many of you will recognize these changes in yourselves already. You've just seen a good example: Up until a few moments ago most of you thought of your free milk as a benefit. But now that I've told you it was an experiment, your feelings about the milk have suddenly changed. Am I right?</p>
+
+            <p style="margin-bottom: 16px;">Still, there's nothing too odd about that—it's human nature to change your mind, and not just in puberty. In fact, the teachers have been saying that your class is actually a good bit calmer and better behaved than the usual group. Maybe we have the milk to thank for that.</p>
+<span id="last2"></span>
+            <p style="margin-bottom: 16px;">But I have something more important I wanted to tell you today. I wanted you to know that I'll be retiring at the end of the month. No, I'm not moving to a new school, I'm retiring as a teacher. Which means that you're the last students I'll ever teach, and I'll remember you for as long as I live.</p>
+
+            <p style="margin-bottom: 16px;">Settle down now. I appreciate your response—especially those of you who actually sound as though you're sorry to hear I'm leaving—what? Am I resigning because of what happened? Yes, I suppose so, and I'd like to take some time today to talk to you about that.</p>
+
+            <p style="margin-bottom: 0;">Now that I'm retiring, I've been thinking again about what it's meant to me to be a teacher.</p>
+        </div>
+
+        <div style="border-top: 1px solid #666; margin-top: 24px; padding-top: 16px; text-align: center;">
+            <a href="#landing" style="color: blue; text-decoration: ; font-size: 0.9em;">Kembali ke atas</a>
+            
+            <div style="margin-top: 12px; font-size: 0.9em; color: white;">
+                <a href="index.html"><button style="background-color: Red; font-size: 0.9em; color: white; cursor: pointer; padding: 10px 20px;">Logout</button></a>
+            </div>
+        </div>
+    </article>
+    
 </body>
 </html>
