@@ -92,3 +92,6 @@ nav {
 .menu li a:hover {
     color: yellow;
 }
+.dna img:hover {
+    scale: 1.2;
+}
